@@ -4,7 +4,12 @@ import Veggie from "../components/Veggie";
 import React from "react";
 
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Veggie />
+      <Popular />
+    </div>
+  );
 }
 
 export default Home;
