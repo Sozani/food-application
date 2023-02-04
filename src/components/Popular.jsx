@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 
 function Popular() {
+  useEffect(() => {
+    getPopular()
+  },[])
   const getPopular = async () => {
-    const api = await fetch('https://api.spoonacular.com/recipes/random?apiKey=${process.env.React-APP-API-KEY}&number=9')
+    const api = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline`)
+    const data = await api.json()
+    console.log(data)
   }
   return <div>Popular</div>;
 }
